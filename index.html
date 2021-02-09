@@ -9,6 +9,7 @@
     </head>
     <body>
         <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
         <!--barre de navigation-->
         <div class="barre fixe">
             <!--on ajoute un espaceur pour centrer les éléments verticalement dans la barre-->
@@ -47,23 +48,34 @@
             <div class="paragraphe">
                 Imperdiet massa tincidunt nunc pulvinar sapien et. Id eu nisl nunc mi ipsum faucibus. Cum sociis natoque penatibus et magnis dis. Nulla facilisi cras fermentum odio. Feugiat in fermentum posuere urna. Vitae justo eget magna fermentum iaculis eu non diam phasellus. Egestas tellus rutrum tellus pellentesque eu tincidunt. Feugiat vivamus at augue eget arcu dictum varius. Sit amet porttitor eget dolor morbi non arcu risus. Id eu nisl nunc mi ipsum faucibus. Lacus laoreet non curabitur gravida arcu ac tortor dignissim convallis. Neque sodales ut etiam sit amet nisl.
             </div>
+            <!--bouton temporaire pour montrer l'animation-->
+            <div class="animation dynamique bouton" onclick="
+                elements = document.getElementsByClassName('animation dynamique interieur')
+                for (let i = 0; i < elements.length; i++) {
+                    setTimeout(function() {
+                        elements[i].classList.toggle('active')
+                    }, i * 200)
+                }
+            ">
+                Montrer l'animation
+            </div>
             <!--la partie extérieure définit les marges et les espacements relatifs aux autres éléments de la page, et définit aussi l'image d'arrière-plan-->
             <div class="animation dynamique exterieur">
                 <!--les textes à l'intérieur sont animés-->
                 <div class="animation dynamique interieur">
-                    Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_
+                    Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_
                 </div>
                 <div class="animation dynamique interieur">
-                    Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_
+                    Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_
                 </div>
                 <div class="animation dynamique interieur">
-                    Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_
+                    Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_
                 </div>
                 <div class="animation dynamique interieur">
-                    Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_
+                    Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_
                 </div>
                 <div class="animation dynamique interieur">
-                    Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_
+                    Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_Manifeste_
                 </div>
             </div>
             <div class="paragraphe">
@@ -78,6 +90,10 @@
             <div class="paragraphe">
                 Felis eget velit aliquet sagittis id consectetur purus ut faucibus. Velit scelerisque in dictum non consectetur. Ultricies tristique nulla aliquet enim tortor at auctor urna. Quis commodo odio aenean sed adipiscing diam donec adipiscing. Velit egestas dui id ornare arcu odio. Scelerisque eu ultrices vitae auctor eu augue. Quisque egestas diam in arcu cursus euismod quis. Suscipit tellus mauris a diam maecenas. Id consectetur purus ut faucibus pulvinar elementum. Morbi tristique senectus et netus. Imperdiet sed euismod nisi porta lorem mollis aliquam ut porttitor. Praesent semper feugiat nibh sed pulvinar proin gravida hendrerit. Penatibus et magnis dis parturient montes nascetur. Egestas tellus rutrum tellus pellentesque. Et tortor consequat id porta nibh. Pulvinar elementum integer enim neque. Sem nulla pharetra diam sit. Ultricies mi eget mauris pharetra et.
             </div>
+            <!--bouton temporaire pour montrer l'animation-->
+            <div class="animation image bouton" onclick="document.getElementsByClassName('animation image conteneur interieur')[0].classList.toggle('active')">
+                Montrer l'image
+            </div>
             <!--le conteneur extérieur  définit les marges et les espacements relatifs aux autres éléments de la page-->
             <div class="animation image conteneur exterieur">
                 <!--le conteneur intérieur contient l'image et le texte de description, et c'est ce que l'on anime-->
@@ -88,8 +104,10 @@
                         <!--le conteneur de description intérieur établit le style du texte-->
                         <div class="animation image description interieur">
                             Ilford HP5
-                            <br>Nikkormat FT2
-                            <br>Nikkor-S f50mm f1.4
+                            <div class="animation image description separateur"></div>
+                            Nikkormat FT2
+                            <div class="animation image description separateur"></div>
+                            Nikkor-S 50mm f1.4
                         </div>
                     </div>
                 </div>
