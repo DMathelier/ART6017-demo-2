@@ -108,6 +108,7 @@ body {
 .section {
     margin-top: 4rem;
     margin-bottom: 1rem;
+    padding-bottom: 0.7rem;
 
     font-family: "IMB Plex Sans", sans-serif;
     font-size: 3rem;
