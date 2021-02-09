@@ -1,12 +1,13 @@
 html {
+    margin: 0;
     overflow-x: hidden;
 }
 
 /* parent du document */
 body {
     margin: 0;
-    width: 100vw;
     overflow-x: hidden;
+    width: 100vw;
 
     background-color: #111111;
 }
@@ -146,7 +147,7 @@ body {
     font-family: "Space Mono", monospace;
     font-style: italic;
     font-size: 10rem;
-    color: #ff1b7a;
+    color: #ff1b50;
     white-space: nowrap;
     mix-blend-mode: hard-light;
 
@@ -234,4 +235,17 @@ body {
     font-size: 1.5rem;
     color: #111111;
     cursor: pointer;
+}
+
+.bas {
+    width: 80vw;
+    padding-right: 10vw;
+    padding-left: 10vw;
+    padding-bottom: 6rem;
+    padding-top: 3rem;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.5rem;
+    color: #111111;
+    background-color: #ff1b50;
 }
