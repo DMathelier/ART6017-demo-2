@@ -3,11 +3,9 @@ function Model() {
     model = this
 
     // toutes les variables ci-dessous sont les éléments HTML que nous voudrons accéder et modifier
-    this.sections = null
-    this.barreConteneurAvant = null
-    this.barreConteneurArriere = null
-    this.barrePremierElementAvant = null
-    this.barrePremierElementArriere = null
+    this.sectionsMain = null
+    this.sectionsConteneurAvant = null
+    this.sectionsConteneurArriere = null
 
     this.dynamiqueExterieur = null
     this.dynamiqueInterieurs = null
