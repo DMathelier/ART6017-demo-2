@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: #111111;
+}
+
+.zero.height {
+    height: 0;
+}
+
+.barre.fixe {
+    position: fixed;
+    padding-left: 10vw;
+    margin-top: -10rem;
+    width: 100vw;
+    height: 7rem;
+    background-color: #f0f0f0;
+}
+
+.barre.espaceur {
+    margin-top: 0.8rem;
+}
+
+.barre.conteneur {
+    font-family: "IMB Plex Sans", sans-serif;
+    font-size: 3rem;
+    font-weight: 100;
+    white-space: nowrap;
+    padding: 1rem;
+}
+
+.barre.conteneur.avant {
+    width: 12rem;
+    height: 3.2rem;
+
+    overflow: hidden;
+
+    color: #f0f0f0;
+    background-color: #111111;
+}
+
+.barre.conteneur.arriere {
+    color: #111111;
+}
+
+.barre.element {
+    transition: all cubic-bezier(.22,0,.19,1) 1s;
+    transition-property: margin-left, width;
+}
+
+.barre.fixe:hover>.zero.height>.barre.conteneur>.barre.element:first-of-type {
+    margin-left: -20rem;
+}
+
+.barre.element {
+    top: 0;
+    display: inline-block;
+}
+
+.main {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+}
+
+/* commentaire d'une ligne */
+
+.titre, .paragraphe {
+    padding: 1rem;
+}
+
+.titre {
+    font-family: "IMB Plex Sans", sans-serif;
+    font-size: 4rem;
+    font-weight: 100;
+    color: #111111;
+    background-color: #f0f0f0;
+
+    mix-blend-mode: hard-light;
+
+    display: inline-block;
+}
+
+.section {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+
+    font-family: "IMB Plex Sans", sans-serif;
+    font-size: 3rem;
+    font-weight: 100;
+    color: #ff5ea1;
+
+    border-width: 0.3rem;
+    border-bottom: solid;
+    border-color: #ff5ea1;
+
+    mix-blend-mode: hard-light;
+}
+
+.paragraphe {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.5rem;
+    color: #ff5ea1;
+
+    padding: 0;
+
+    mix-blend-mode: hard-light;
+
+    margin-bottom: 1rem;
+}
+
+.animation.dynamique.exterieur {
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    background-image: url("manifeste.jpg");
+    background-size: 100vw;
+    width: 100vw;
+    margin-left: -10vw;
+    overflow-x: hidden;
+}
+
+.animation.dynamique.interieur {
+    font-family: "Space Mono", monospace;
+    font-style: italic;
+    font-size: 12rem;
+    color: #ff1b7a;
+    white-space: nowrap;
+    mix-blend-mode: hard-light;
+
+    transform: translate3d(5rem, 0, 0);
+    transition: transform cubic-bezier(.22,0,.19,1) 6s;
+}
+
+.animation.dynamique.exterieur:hover>.animation.dynamique.interieur {
+    transform: translate3d(-200rem, 0, 0);
+}
+
+.animation.image.conteneur.exterieur {
+    margin-top: 4rem;
+    height: 80vw;
+}
+
+.animation.image.conteneur.interieur {
+    mix-blend-mode: screen;
+    width: 100vw;
+
+    transform: translate3d(0, 0, 0);
+    transition: transform cubic-bezier(.22,0,.19,1) 4s;
+}
+
+.animation.image.conteneur.exterieur:hover>.animation.image.conteneur.interieur {
+    transform: scale(2, 2) translate3d(70vw, 0, 0);
+}
+
+.animation.image>img {
+    display: inline-block;
+    width: 60vw;
+}
+
+.animation.image.description.exterieur {
+    display: inline-block;
+    margin-left: 2vw;
+    width: 18vw;
+
+    mix-blend-mode: hard-light;
+    vertical-align:top;
+}
+
+.animation.image.description.interieur {
+    display: block;
+    padding: 1rem;
+
+    font-family: "Space Mono", monospace;
+    font-style: italic;
+    font-size: 2vw;
+    color: #a4a4a4;
+
+    border-width: 0.2vw;
+    border-style: solid;
+    border-color: #a4a4a4;
+
+    mix-blend-mode: hard-light;
+}
