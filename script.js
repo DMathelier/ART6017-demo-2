@@ -88,7 +88,7 @@ function Controller(model, view) {
 }
 
 // on attend que la fenêtre soit prête avant de commencer à initialiser notre code
-window.onload = function() {
+window.addEventListener("load", function() {
     // on crée notre view et notre modèle et on les initialise
     let view = new View()
     let model = new Model()
@@ -97,4 +97,4 @@ window.onload = function() {
     // on crée notre controller en le liant au view et au model, puis on l'initialise
     let controller = new Controller(model, view)
     controller.initialize()
-}
+})
