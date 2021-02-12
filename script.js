@@ -40,13 +40,9 @@ function Model() {
     this.update = function() {
         // TODO: obtenir la position des éléments sur l'écran, et décider de l'état des animations selon leur position relative à la fenêtre. on veut déclancher l'animation quand l'élément dépasse le tiers inférieur de l'écran
 
-        //console.log(model.dynamiqueExterieur.getBoundingClientRect().top)
+        model.dynamiqueActif = model.dynamiqueExterieur.getBoundingClientRect().top < 2 / 3 * window.innerHeight
+        model.imageActif = model.imageExterieur.getBoundingClientRect().top < 2 / 3 * window.innerHeight
 
-        // la position d'un élément relative à l'écran peut être obtenue avec:
-        //    element.getBoundingClientRect().top
-
-        // la hauteur de la page peut être obtenue avec:
-        //    window.innerHeight
     }
 }
 
@@ -85,13 +81,15 @@ function Controller(model, view) {
     // lie les événements aux fonctions du modèle et du view qui provoquent des changements dans la page
     this.initialize = function() {
         // TODO: lier la mise à jour du controller à l'événement document.onscroll
-        document.addEventListener("scroll", model.update)
+        document.addEventListener("scroll", controller.update)
     }
 
     // mets à jour toute la page
     this.update = function() {
         // TODO: mettre à jour le modèle
         // TODO: mettre à jour le view
+        model.update()
+        view.update(model)
     }
 }
 
