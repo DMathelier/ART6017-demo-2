@@ -54,6 +54,8 @@ function View() {
     this.update = function(model) {
         // TODO: utiliser model pour vérifier qu'est-ce qu'on doit mettre à jour, puis appeler updateBarre / updateDynamique / updateImage au nécessaire
         // attention! une fois qu'on a mis les choses à jour, il faut le marquer dans le modèle (sectionChangee / dynamiqueChangee / imageChangee reviennent à false)
+        view.updateDynamique(model)
+        view.updateImage(model)
     }
 
     // fonction pour mettre à jour le style de la barre lors des animations
@@ -64,11 +66,30 @@ function View() {
     // fonction pour mettre à jour dynamique lors des animations
     this.updateDynamique = function(model) {
         // TODO: appliquer le style approprié sur dynamique
+        if (model.dynamiqueActif) {
+            for (let i = 0; i < model.dynamiqueInterieurs.length; i++) {
+                setTimeout(function() {
+                    model.dynamiqueInterieurs[i].classList.add('active')
+                }, i * 200)
+            }
+        } else {
+            for (let i = 0; i < model.dynamiqueInterieurs.length; i++) {
+                setTimeout(function() {
+                    model.dynamiqueInterieurs[i].classList.remove('active')
+                }, i * 200)
+            }
+        }
+
     }
 
     // fonction pour mettre à jour l'image lors des animations
     this.updateImage = function(model) {
         // TODO: appliquer le style approprié sur l'image
+        if (model.imageActif) {
+            model.imageInterieur.classList.add("active")
+        } else {
+            model.imageInterieur.classList.remove("active")
+        }
     }
 }
 
