@@ -29,17 +29,24 @@ function Model() {
     // fonction pour aller obtenir les objets HTML nécessaires
     this.initialize = function() {
         // TODO: utiliser document.getElementByClassName() pour obtenir les éléments
+        model.dynamiqueExterieur = document.getElementsByClassName("animation dynamique exterieur")[0]
+        model.dynamiqueInterieurs = document.getElementsByClassName("animation dynamique interieur")
+
+        model.imageExterieur = document.getElementsByClassName("animation image conteneur exterieur")[0]
+        model.imageInterieur = document.getElementsByClassName("animation image conteneur interieur")[0]
     }
 
     // fonction pour mettre à jour l'état de toutes les animations
     this.update = function() {
         // TODO: obtenir la position des éléments sur l'écran, et décider de l'état des animations selon leur position relative à la fenêtre. on veut déclancher l'animation quand l'élément dépasse le tiers inférieur de l'écran
 
+        //console.log(model.dynamiqueExterieur.getBoundingClientRect().top)
+
         // la position d'un élément relative à l'écran peut être obtenue avec:
         //    element.getBoundingClientRect().top
 
         // la hauteur de la page peut être obtenue avec:
-        //    document.documentElement.clientHeight
+        //    window.innerHeight
     }
 }
 
@@ -78,6 +85,7 @@ function Controller(model, view) {
     // lie les événements aux fonctions du modèle et du view qui provoquent des changements dans la page
     this.initialize = function() {
         // TODO: lier la mise à jour du controller à l'événement document.onscroll
+        document.addEventListener("scroll", model.update)
     }
 
     // mets à jour toute la page
